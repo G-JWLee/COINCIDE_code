@@ -1,7 +1,6 @@
 # COINCIDE
 
-### **Concept-skill Transferability-based Data Selection for Large Vision-Language Models** <br>
-## **EMNLP 2024**
+### **Concept-skill Transferability-based Data Selection for Large Vision-Language Models, EMNLP 2024**
 * Authors: [Jaewoo Lee](https://g-jwlee.github.io/), [Boyang Li^](http://www.boyangli.org/), [Sung Ju Hwang^](http://www.sungjuhwang.com/)
 * [Paper](https://arxiv.org/abs/2406.10995)
 
