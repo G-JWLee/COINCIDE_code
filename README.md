@@ -1,6 +1,7 @@
 # COINCIDE
 
-### **Concept-skill Transferability-based Data Selection for Large Vision-Language Models**  
+### **Concept-skill Transferability-based Data Selection for Large Vision-Language Models** <br>
+EMNLP 2024
 * Authors: [Jaewoo Lee](https://g-jwlee.github.io/), [Boyang Li^](http://www.boyangli.org/), [Sung Ju Hwang^](http://www.sungjuhwang.com/)
 * [Paper](https://arxiv.org/abs/2406.10995)
 
@@ -96,11 +97,10 @@ bash scripts/v1_5/eval/{eval_benchmark}.sh MODEL_NAME
 
 ## Bibtex
 ```
-@article{lee2024coincide,
+@inproceedings{lee2024coincide,
       title={Concept-skill Transferability-based Data Selection for Large Vision-Language Models},
       author={Jaewoo Lee and Boyang Li and Sung Ju Hwang},
-      journal={arXiv preprint arXiv:2406.10995},
       year={2024},
-      url={https://arxiv.org/abs/2406.10995},
+      booktitle={Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
 }
 ```
