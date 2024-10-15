@@ -19,7 +19,7 @@ from tinyllava.constants import IGNORE_INDEX, IMAGE_TOKEN_INDEX
 from tinyllava.model.builder import load_pretrained_model
 from tinyllava.utils import disable_torch_init
 from tinyllava.mm_utils import get_model_name_from_path
-from tinyllava.eval.score.wanda import autograd_hacks
+from tinyllava.eval.score.coincide import autograd_hacks
 from torch.utils.data import Dataset, DataLoader
 
 from PIL import Image
