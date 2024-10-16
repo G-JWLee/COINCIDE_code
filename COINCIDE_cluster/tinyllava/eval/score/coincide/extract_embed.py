@@ -232,6 +232,7 @@ def eval_model(args):
         autograd_hacks.add_hooks(layers[i].self_attn.o_proj)
 
     chunk_size = len(data_loader.dataset.list_data_dict)
+    np.save(args.score_path + '_recover_indices.npy', data_loader.dataset.random_recov_indices)
     num_layers = len(layers)
     num_target_layers = len(args.layer_list)
 
