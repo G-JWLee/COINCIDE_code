@@ -13,7 +13,7 @@ CHUNKS=${#GPULIST[@]}
 CKPT="vison_flan_tinyllava_v100_2.0b"
 
 for IDX in $(seq 0 $((CHUNKS-1))); do
-    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python tinyllava/eval/score/coincide/score_task_embed_tan.py \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python tinyllava/eval/score/coincide/extract_embed.py \
         --model_path ${BASE_PATH}/checkpoints/$CKPT \
         --data_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/annotation_191-task_1k.json \
         --image_folder ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/images_191task_1k \
