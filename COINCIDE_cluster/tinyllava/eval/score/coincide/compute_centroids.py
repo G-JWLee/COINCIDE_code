@@ -3,7 +3,7 @@ import random
 import numpy as np
 import os
 import logging
-from tinyllava.eval.score.SemDeDup.clustering.clustering import compute_centroids
+from tinyllava.eval.score.coincide.clustering import compute_centroids
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
