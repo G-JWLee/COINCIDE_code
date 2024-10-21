@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--centroid_embed_path", type=str, required=True)
-    parser.add_argument("--output_indices_path", type=str, required=True, help="Path to output directory")
+    parser.add_argument("--transferability_path", type=str, required=True, help="Path to output directory")
     parser.add_argument("--k", type=int, default=4)
     parser.add_argument("--knn_path", type=str, required=True)
 
@@ -40,4 +40,4 @@ if __name__ == "__main__":
     cosine_sim[mask] = 0
     transfer = cosine_sim.sum(axis=-1) / (~mask).sum(axis=-1)
     # transfer = cosine_sim.mean(axis=-1)
-    np.save(args.output_indices_path, transfer)
+    np.save(args.transferability_path, transfer)

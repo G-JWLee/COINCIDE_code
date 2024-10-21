@@ -1,6 +1,8 @@
 #!/bin/bash
 
 BASE_PATH="/base_path"
+SAMPLE_RATIO=0.2
+TEMP=0.1
 
 python tinyllava/eval/score/coincide/compute_centroids.py \
         --sim_metric cosine \
@@ -14,6 +16,14 @@ python tinyllava/eval/score/coincide/compute_centroids.py \
 
 python tinyllava/eval/score/coincide/cluster_transferability.py \
         --centroid_embed_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/kmeans_centroids.npy \
-        --output_indices_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/transfer_lang.npy \
+        --transferability_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/transfer_lang.npy \
         --k 4 \
         --knn_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/knn \
+
+
+python tinyllava/eval/score/coincide/cluster_wise_prune.py \
+        --embedding_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/tan_act_37111519_msa.npy \
+        --cluster_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/knn_indices.npy
+        --transfer_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/transfer.npy \
+        --fraction $SAMPLE_RATIO \
+        --temp $TEMP \
