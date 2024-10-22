@@ -23,7 +23,7 @@ python tinyllava/eval/score/coincide/cluster_transferability.py \
 
 python tinyllava/eval/score/coincide/cluster_wise_prune.py \
         --embedding_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/tan_act_37111519_msa.npy \
-        --cluster_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/knn_indices.npy
+        --cluster_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/nearest_cent.npy
         --transfer_path ${BASE_PATH}/COINCIDE_train/playground/data/vision-flan_191-task_1k/2500_save_folder/transfer.npy \
         --fraction $SAMPLE_RATIO \
         --temp $TEMP \
